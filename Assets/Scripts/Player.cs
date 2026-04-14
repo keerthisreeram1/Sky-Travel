@@ -101,7 +101,8 @@ public class Player : MonoBehaviour
             health -= 25;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             StartCoroutine(BlinkRed());
-            CameraShake.Instance.Shake();  
+            if (CameraShake.Instance != null)
+                CameraShake.Instance.Shake();
             if (health <= 0)
                 Die();
         }
