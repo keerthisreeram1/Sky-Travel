@@ -56,10 +56,10 @@
 | ✅ | ☐ | `GroundCheck` child object created at bottom of player |
 | ✅ | ☐ | Player moves left/right with A/D or arrow keys |
 | ✅ | ☐ | Player jumps with Space and only when grounded |
-| ✅ | ☐ | Sprite flips direction when moving |
+| ✅ | ☐ | Sprite flips direction when moving - 
 | ✅ | ☐ | Better jump physics applied (fall feels snappy, tap = short jump) |
 
-**Section Notes:** _______________________________________________
+**Section Notes:** enemy sprite flips direction whem moving in different directions
 
 ---
 
@@ -77,7 +77,7 @@
 | ✅ | ☐ | "Has Exit Time" unchecked on all movement transitions |
 | ✅ | ☐ | Animations play correctly in Play Mode |
 
-**Section Notes:** _______________________________________________
+**Section Notes:** player also turns red when it hits enemy!
 
 ---
 
@@ -142,7 +142,7 @@
 | ☐ | ☐ | Arrows fire in the direction the player faces |
 | ☐ | ☐ | `FirePoint` child object positioned correctly |
 
-**Section Notes:** _______________________________________________
+**Section Notes:** my game focused on pushing the enemies off of the ground in order to defeat them 
 
 ---
 
@@ -150,16 +150,16 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | `PlayerHealth.cs` tracks current / max health |
+| ✅ | ☐ | `PlayerHealth.cs` tracks current / max health |
 | ✅ | ☐ | UI hearts update when player takes damage |
-| ☐ | ☐ | Invincibility frames work after taking damage (flashing effect) |
-| ☐ | ☐ | Player death triggers game over flow |
+| ✅ | ☐ | Invincibility frames work after taking damage (flashing effect) |
+| ✅ | ☐ | Player death triggers game over flow |
 | ☐ | ☐ | `GameSession.cs` singleton persists across scenes |
-| ☐ | ☐ | Lives system: death decrements lives, reloads scene |
-| ☐ | ☐ | Out of lives → loads Game Over scene |
-| ☐ | ☐ | Hazard tiles damage/kill player on touch |
+| ✅ | ☐ | Lives system: death decrements lives, reloads scene |
+| ✅ | ☐ | Out of lives → loads Game Over scene |
+| ✅ | ☐ | Hazard tiles damage/kill player on touch |
 
-**Section Notes:** _______________________________________________
+**Section Notes:** player health is tracked in the main player.cs file itself
 
 ---
 
@@ -181,11 +181,11 @@
 
 | ✅ Done | ⚠️ Stuck | Task |
 |:---:|:---:|---|
-| ☐ | ☐ | Background music loops on AudioSource |
-| ☐ | ☐ | Jump SFX plays when player jumps |
+| ✅ | ☐ | Background music loops on AudioSource |
+| ✅ | ☐ | Jump SFX plays when player jumps |
 | ☐ | ☐ | Shoot SFX plays when player fires |
-| ☐ | ☐ | Damage SFX plays when player is hit |
-| ☐ | ☐ | At least 1 particle effect (death, hit, collect, etc.) |
+| ✅ | ☐ | Damage SFX plays when player is hit |
+| ✅ | ☐ | At least 1 particle effect (death, hit, collect, etc.) |
 
 **Section Notes:** _______________________________________________
 
@@ -200,7 +200,7 @@
 | ✅ | All scripts organized in correct subfolders |
 | ✅ | All tweakable values use `[SerializeField]` — no magic numbers |
 | ✅ | Enemies are **prefabs** (not unique scene objects) |
-| ✅ | Arrow is a **prefab** |
+|    | Arrow is a **prefab** |
 | ✅ | GameObjects are named clearly in Hierarchy |
 | ✅ | Unused GameObjects/scripts removed |
 
@@ -220,7 +220,7 @@
 | ✅ | Difficulty | Feature |
 |:---:|:---:|---|
 | ✅ | 🟢 | Double jump |
-| ☐ | 🟢 | Animated collectible coins/gems |
+| ✅ | 🟢 | Animated collectible coins/gems |
 | ☐ | 🟢 | Multiple enemy types (reskins with different speeds) |
 | ☐ | 🟡 | Checkpoint system |
 | ✅ | 🟡 | Moving platform |
@@ -230,8 +230,8 @@
 | ☐ | 🔴 | Multiple levels (3+) with scene transitions |
 | ☐ | 🔴 | Save system (high score persists between sessions) |
 
-**Extension chosen:** _______________________________________  
-**Brief description of what you added:** _______________________________________
+**Extension chosen:** Double jump, animated collectible, moving platform  
+**Brief description of what you added:** player is able to double jump by pressing space bar twice, coins are animated to twirl, moving platform from left to right is implemented. 
 
 ---
 
@@ -244,7 +244,7 @@
 | ✅ | Submitted GitHub repository link on Canvas |
 | ✅ | Repository is **public** or instructor has been given access |
 | ✅ | All 3 tutorial documents included in repo (`Tutorial.md`, `Checklist.md`, `QuickReference.md`) |
-| ☐ | Completed **Reflection Questions** (below) |
+| ✅ | Completed **Reflection Questions** (below) |
 
 ---
 
@@ -254,28 +254,23 @@ Answer these in **2–4 sentences each**. These are the same questions you'll re
 
 **1. What was your rapid prototype goal for this project?**
 
-_______________________________________________________________
-_______________________________________________________________
+The goal for this project was to build a 2D platformer called SkyTravel that has three core mechanics: basic left/right movements of player, ability to push off enemies, damage from enemies and thorns. The final win condition was to reach a checkpoint flag. The goal was to confirm these systems worked together before adding more complex features like levels, UI, and audio.
 
 **2. How closely did your final game match your original prototype vision? What changed and why?**
 
-_______________________________________________________________
-_______________________________________________________________
+My final game matched my original prototype vision completely. I even managed to add additional features such as double jump, coin animations and multiple scenes as well as moving platforms. 
 
 **3. What is the most technically challenging thing you implemented? How did you solve it?**
 
-_______________________________________________________________
-_______________________________________________________________
+The most technically challenging thing I imeplemented was implementing the health bar which tracked damage. I had trouble getting the health to decrease when it hit the enemies or thorns but realized it was an issue with configuration of the object such as box collider and miscalculation in the script that I wrote. 
 
 **4. If you had one more week, what would you add or change?**
 
-_______________________________________________________________
-_______________________________________________________________
+If I had one more week, I would add a shooter system (although the current push system manages to elimiate enemies efficiently)
 
 **5. How does your approach to game development now compare to when you started the course?**
 
-_______________________________________________________________
-_______________________________________________________________
+I make sure I start simple and build from there instead of starting with really complex goals. For example, for this project my initial prototype was to have a moving player and jump features between platforms to function well. Starting with that goal made the building process way less complex. 
 
 ---
 
